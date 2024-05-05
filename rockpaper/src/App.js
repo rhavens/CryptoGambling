@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
+import rockPaperScissorsImage from './rockpaperscissor.jpg';
 
 const RockPaperScissors = () => {
     const [web3, setWeb3] = useState(null);
@@ -126,8 +127,9 @@ const RockPaperScissors = () => {
     };
 
     return (
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h1>Rock Paper Scissors</h1>
+            <img src={rockPaperScissorsImage} alt="Rock Paper Scissors" width="25%"></img>
             <p>User Address: {userAddress}</p>
             <p>Balance: {balance} ETH</p>
             <div>
